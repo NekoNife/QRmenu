@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubActivity">
+
+    <TextView
+        android:id="@+id/shopname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="177dp"
+        android:text="가계이름"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/list_menu"
+        android:layout_width="409dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopname" />
+
+    <Button
+        android:id="@+id/plusbt"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginEnd="8dp"
+        android:text="추가"
+        app:layout_constraintBottom_toBottomOf="@+id/minusbt"
+        app:layout_constraintEnd_toStartOf="@+id/selectnum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/minusbt" />
+
+    <Button
+        android:id="@+id/minusbt"
+        android:layout_width="67dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:text="제거"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_menu" />
+
+    <TextView
+        android:id="@+id/selectfoood"
+        android:layout_width="139dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:breakStrategy="high_quality"
+        android:gravity="center"
+        android:text="선택없음"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/plusbt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/plusbt" />
+
+    <TextView
+        android:id="@+id/selectnum"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:breakStrategy="high_quality"
+        android:gravity="center"
+        android:text="선택없음"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/minusbt"
+        app:layout_constraintEnd_toStartOf="@+id/minusbt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/plusbt"
+        app:layout_constraintTop_toTopOf="@+id/minusbt" />
+
+    <Button
+        android:id="@+id/endbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="50dp"
+        android:text="주문리스트"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

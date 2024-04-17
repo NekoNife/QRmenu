@@ -1,0 +1,74 @@
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Integer data1 =  null ;
+	String data2  = (String) null ;
+	String data3  = (String) null ;
+	Integer data4 =  null ;
+
+	while(true) {
+		try {
+			ServerSocket server = new ServerSocket(9999);
+			System.out.println("사용자 접속 대기");
+			
+			Socket socket = server.accept();
+			
+			InputStream input = socket.getInputStream();
+			DataInputStream dis = new DataInputStream(input);
+			
+			OutputStream output = socket.getOutputStream();
+			DataOutputStream dos = new DataOutputStream(output);
+		
+			data4 = dis.readInt();	
+			if (data4 == 1 ) {	
+				data1 = dis.readInt();	
+				 data2 = dis.readUTF();
+			     data3 = dis.readUTF();
+			System.out.printf("주문 서버전송\n");
+			System.out.printf("테이블 번호 : %s\n", data1);
+			System.out.printf("가계이름 : %s\n", data2);
+			System.out.printf("data3 : %s\n", data3);
+			}else if (data4 == 2){
+		
+		
+		
+			System.out.printf("주문 어플전송\n");
+			System.out.printf("테이블 번호 : %s\n", data1);
+			dos.writeInt(data1);
+			System.out.printf("가계이름 : %s\n", data2);
+		 	dos.writeUTF(data2);
+			System.out.printf("data3 : %s\n", data3);
+			dos.writeUTF(data3);
+			}
+				/*int data1 = dis.readInt();		
+				String data2 = dis.readUTF();
+				String data3 = dis.readUTF();
+		*/
+				
+			
+					
+			
+			socket.close();
+			server.close();
+			
+
+		}catch(Exception e) {
+			
+			e.printStackTrace();
+			
+		}
+	
+		
+		
+	}
+	}
+
+}

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#353535"
+    tools:context=".SubActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="410dp"
+        android:layout_height="130dp"
+        android:background="#E28DAF"
+        app:layout_constraintBottom_toTopOf="@+id/list_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/shopname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="177dp"
+        android:fontFamily="@font/noto_sans_bold"
+        android:text="가계이름"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/list_menu"
+        android:layout_width="409dp"
+        android:layout_height="400dp"
+        android:background="#35353535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/plusbt"
+        android:layout_width="71dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#E28DAF"
+        android:fontFamily="@font/noto_sans_bold"
+        android:text="추가"
+        android:textAllCaps="false"
+        android:textColor="#353535"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/minusbt"
+        app:layout_constraintEnd_toStartOf="@+id/selectnum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/minusbt" />
+
+    <Button
+        android:id="@+id/minusbt"
+        android:layout_width="67dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#E28DAF"
+        android:text="제거"
+        android:textColor="#353535"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_menu" />
+
+    <TextView
+        android:id="@+id/selectfoood"
+        android:layout_width="139dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:breakStrategy="high_quality"
+        android:fontFamily="@font/noto_sans_bold"
+        android:gravity="center"
+        android:text="선택없음"
+        android:textColor="#919191"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/plusbt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/plusbt" />
+
+    <TextView
+        android:id="@+id/selectnum"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:breakStrategy="high_quality"
+        android:fontFamily="@font/noto_sans_bold"
+        android:gravity="center"
+        android:text="선택없음"
+        android:textColor="#919191"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/minusbt"
+        app:layout_constraintEnd_toStartOf="@+id/minusbt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/plusbt"
+        app:layout_constraintTop_toTopOf="@+id/minusbt" />
+
+    <ImageButton
+        android:id="@+id/endbt"
+        android:layout_width="295dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="40dp"
+        android:background="#353535"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/order_menu_next_bt"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#353535"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="135dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="138dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="80sp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_bold"
+        android:gravity="center"
+        android:text="아이디"
+        android:textColor="#E28DAF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/idtextveiw"
+        app:layout_constraintEnd_toStartOf="@+id/idtextveiw"
+        app:layout_constraintTop_toTopOf="@+id/idtextveiw" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:fontFamily="@font/noto_sans_bold"
+        android:text="비밀번호"
+        android:textColor="#E28DAF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/passtextveiw"
+        app:layout_constraintEnd_toStartOf="@+id/passtextveiw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/passtextveiw" />
+
+    <EditText
+        android:id="@+id/idtextveiw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="#5E5E5E"
+        android:ems="10"
+        android:hint="아이디 입력"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#919191"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/passtextveiw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#5E5E5E"
+        android:ems="10"
+        android:hint="비밀번호 입력"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#919191"
+        app:layout_constraintEnd_toEndOf="@+id/idtextveiw"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/idtextveiw" />
+
+    <ImageButton
+        android:id="@+id/login_b"
+        android:layout_width="319dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:background="#353535"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passtextveiw"
+        app:srcCompat="@drawable/w_login_bt"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="240sp"
+        android:layout_height="35sp"
+        android:layout_marginStart="84dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/login_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
